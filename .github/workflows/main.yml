@@ -28,7 +28,6 @@ jobs:
       - name: Setup
         run: npm ci
       - name: Test
-        run: |
-          npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+        run: npm run test
       - name: Lint
         run: npm run lint
