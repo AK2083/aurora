@@ -6,7 +6,7 @@
     "start": "ng serve --public-host https://port-4200-aurora-ak2083925102.preview.codeanywhere.com --port 4200",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --browsers=ChromeHeadless",
+    "test": "ng test -- --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "lint": "ng lint"
   },
   "private": true,
