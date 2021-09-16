@@ -6,7 +6,8 @@
     "start": "ng serve --public-host https://port-4200-aurora-ak2083925102.preview.codeanywhere.com --port 4200",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --browsers=ChromeHeadless"
+    "test": "ng test --browsers=ChromeHeadless",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +26,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.5",
+    "@angular-eslint/builder": "12.4.1",
+    "@angular-eslint/eslint-plugin": "12.4.1",
+    "@angular-eslint/eslint-plugin-template": "12.4.1",
+    "@angular-eslint/schematics": "12.4.1",
+    "@angular-eslint/template-parser": "12.4.1",
     "@angular/cli": "~12.2.5",
     "@angular/compiler-cli": "~12.2.0",
     "@tailwindcss/aspect-ratio": "0.2.1",
@@ -33,6 +39,9 @@
     "@tailwindcss/typography": "0.4.1",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/parser": "4.28.2",
+    "eslint": "^7.26.0",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
