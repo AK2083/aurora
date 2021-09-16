@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Test and Linting
 
 # Controls when the workflow will run
 on:
@@ -24,9 +24,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
+          
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
 
-      - name: Setup
-        run: npm ci
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci --ignore-scripts
       - name: Test
         run: npm run test
       - name: Lint
