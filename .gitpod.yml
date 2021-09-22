@@ -1,0 +1,14 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: >
+      sudo apt-get install git-flow &&
+      npm install -g npm &&
+      npm install -g @angular/cli &&
+      npm install &&
+      git flow init -d
+    command: npm run start
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 4200
+    onOpen: open-preview
